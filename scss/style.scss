@@ -63,11 +63,17 @@ body{
 }
 .col-left{
     
-
+    
 }
 .header {
+    position: absolute;
+    z-index: 1000 !important;
     height: 25vh;
     overflow: hidden;
+    .top-nav{
+        // width: 50vw;
+        // float: right !important;
+    }
     .nav-link {
         @extend .ag-bd;
         color: black;
@@ -79,22 +85,39 @@ body{
     }
 }
 
+///////////
+// LEFT TITLE //
+/////////////////////////////////
+
 .project_titles {
     height: 50vh;
-}
-
-#ms_title_1,
-#ms_title_2 {
-    @extend .elo;
-    font-size: 60px;
-    margin-bottom: -5px
-}
-
-.project_titles {
+    
     .project_titles__middle {
         height: 50vh;
         .inner{
             overflow: hidden;
+
+            #ms_title_1,
+            #ms_title_2 {
+                @extend .elo;
+                font-size: 60px;
+                margin-bottom: -5px;
+                
+            }
+            #ms_title_1{
+                margin-right: 20px;
+            }
+            #ms_title_2 {
+                margin-right: 80px;
+            }
+
+            #title_slash {
+                position: absolute;
+                width: 135px;
+                right: 0px;
+                z-index: 10;
+                // top: 0px;
+            }
         }
         p {
             font-size: 17px;
@@ -116,6 +139,10 @@ body{
     // width: 100vw;
     // margin-left: 49.3vw;
 }
+
+///////////
+// PROJECTS COVERS //
+/////////////////////////////////
 .col-right{
     padding-right:0;
     margin-right:0;
@@ -151,9 +178,36 @@ body{
 
             img{
                 width: 50vw !important;
+                // display: none;
             }
         }
+        
 }
+
+#transition {
+    left: 100vw;
+    top: 0;
+    position: absolute !important;
+    width: 110vw;
+    height: 100vh;
+    background-color: rgb(216, 68, 68);
+    z-index: 100;
+    
+    #transition_inside_1{
+        background-color: #fff;
+        position: absolute !important;
+        width: 110vw;
+        height: 1px;
+    }
+    #transition_inside_2 {
+        background-color: rgb(216, 68, 68);
+        position: absolute !important;
+        width: 110vw;
+        height: 1px;
+    }
+}
+
+
 @media (min-width: 992px) and (max-width: 1200px) {
     #ms_title_1,
     #ms_title_2 {

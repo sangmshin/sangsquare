@@ -29,8 +29,8 @@
   font-weight: normal;
   font-style: normal; }
 
-.elo, #ms_title_1,
-#ms_title_2 {
+.elo, .project_titles .project_titles__middle .inner #ms_title_1,
+.project_titles .project_titles__middle .inner #ms_title_2 {
   font-family: "eloquentjfregularuploadedfile";
   letter-spacing: -1px; }
 
@@ -47,6 +47,8 @@ body {
   overflow-x: hidden !important; }
 
 .header {
+  position: absolute;
+  z-index: 1000 !important;
   height: 25vh;
   overflow: hidden; }
   .header .nav-link {
@@ -58,24 +60,30 @@ body {
 
 .project_titles {
   height: 50vh; }
-
-#ms_title_1,
-#ms_title_2 {
-  font-size: 60px;
-  margin-bottom: -5px; }
-
-.project_titles .project_titles__middle {
-  height: 50vh; }
-  .project_titles .project_titles__middle .inner {
-    overflow: hidden; }
-  .project_titles .project_titles__middle p {
-    font-size: 17px;
-    max-width: 700px; }
-
-.project_titles .project_titles__bottom {
-  transform: translateY(-100%); }
-  .project_titles .project_titles__bottom p {
-    font-size: 14px; }
+  .project_titles .project_titles__middle {
+    height: 50vh; }
+    .project_titles .project_titles__middle .inner {
+      overflow: hidden; }
+      .project_titles .project_titles__middle .inner #ms_title_1,
+      .project_titles .project_titles__middle .inner #ms_title_2 {
+        font-size: 60px;
+        margin-bottom: -5px; }
+      .project_titles .project_titles__middle .inner #ms_title_1 {
+        margin-right: 20px; }
+      .project_titles .project_titles__middle .inner #ms_title_2 {
+        margin-right: 80px; }
+      .project_titles .project_titles__middle .inner #title_slash {
+        position: absolute;
+        width: 135px;
+        right: 0px;
+        z-index: 10; }
+    .project_titles .project_titles__middle p {
+      font-size: 17px;
+      max-width: 700px; }
+  .project_titles .project_titles__bottom {
+    transform: translateY(-100%); }
+    .project_titles .project_titles__bottom p {
+      font-size: 14px; }
 
 .col-right {
   padding-right: 0;
@@ -92,6 +100,25 @@ body {
   will-change: transform; }
   .project_covers__wrapper .cover img {
     width: 50vw !important; }
+
+#transition {
+  left: 100vw;
+  top: 0;
+  position: absolute !important;
+  width: 110vw;
+  height: 100vh;
+  background-color: #d84444;
+  z-index: 100; }
+  #transition #transition_inside_1 {
+    background-color: #fff;
+    position: absolute !important;
+    width: 110vw;
+    height: 1px; }
+  #transition #transition_inside_2 {
+    background-color: #d84444;
+    position: absolute !important;
+    width: 110vw;
+    height: 1px; }
 
 @media (min-width: 992px) and (max-width: 1200px) {
   #ms_title_1,

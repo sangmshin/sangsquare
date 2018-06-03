@@ -44,6 +44,7 @@ function animation1() {
     t.to([ms_title_1, ms_title_2], .1, {
         opacity: 1
     });
+    // t.set(transition, {x:0, y:final_pos})
     // t.staggerFrom([ms_title_1, ms_title_2], .5, { x: half_Window_Width, ease: Expo.easeOut }, .2)
 
     /* t.fromTo(cta_button, .5, { opacity: 1, scaleY: .05, x: "-=300", backgroundColor: "white" }, { z: a, rZ: b, opacity: 1, scaleY: .05, x: "+=300", backgroundColor: "white", delay: .1 })
@@ -318,9 +319,12 @@ function browserDetect() {
 
 var div_pos = $('#section1').position().top;
 var win_height = $(window).height() / 2;
+var dead_middle = $(window).height() / 2;
 var div_height = $('#section1').height() / 2;
 var final_pos = win_height - div_height;
 var half_Window_Width = $(window).width() / 2;
+var _left = -($(window).width() + 20)
+
 $('#section0').offset({
     top: final_pos - $('#section0').height(),
     left: $(window).width() / 2
@@ -358,14 +362,69 @@ $(document).ready(function () {
             left: $(window).width() / 2
         });
     }
+    t.set(transition, {
+        y: final_pos-4,
+        height: $('#section1').height()
+    })
+    t.set(transition_inside_1, {
+        y: $('#section1').height() / 2
+        // height: $('#section1').height()
+    })
+    t.set(transition_inside_2, {
+        y: $('#section1').height() / 2
+        // height: $('#section1').height()
+    })
 
 });
+
+$('#section11').click(function (event) {
+    event.preventDefault();
+
+    $.scrollify.disable();
+    t.set([transition_inside_1, transition_inside_2], {
+        y: dead_middle,
+        opacity:0
+    })
+    t.to(transition, .5, {
+        x: _left
+    })
+    t.to(transition, .3, {
+        height: $(window).height(),
+        y:0,
+        ease:Expo.easeIn,
+        delay:.5
+    })
+    t.to(transition_inside_1, .4, {
+        height: $(window).height(),
+        opacity:1,
+        y: 0,
+        ease: Expo.easeOut,
+        delay: .8
+    })
+    t.to(transition_inside_2, .5, {
+        height: $(window).height(),
+        opacity: 1,
+        y: 0,
+        ease: Expo.easeOut,
+        delay: 1.0
+    })
+    t.to(header_elements, 1, {
+        x: 100,
+        delay: .5
+    })
+    
+})
 
 $(window).resize(function () {
     let _win_height = $(window).height() / 2;
     let _div_height = $('#section1').height() / 2;
+    dead_middle = $(window).height() / 2;
+    
+    win_height = $(window).height() / 2;
     half_Window_Width = $(window).width() / 2;
     final_pos = _win_height - _div_height;
+    _left = -($(window).width() + 16)
+
     console.log(final_pos);
 
     $('#section0').offset({
@@ -391,12 +450,16 @@ $(window).resize(function () {
         offset: -(final_pos),
 
     });
+    t.set(transition, {
+        x: 0,
+        y: final_pos,
+        height: $('#section1').height()
+    })
 });
+
 const hash = window.location.hash;
 console.log(hash);
-if (hash == '#2') {
-    console.log('hash is 2');
-}
+
 
 $.scrollify({
     section: ".section",
@@ -433,7 +496,7 @@ $.scrollify({
             // t.staggerTo([ms_title_1, ms_title_2], .5, { x: half_Window_Width, ease: Expo.easeOut }, .2)
             
         }
-
+        
         // console.log('middle position:', final_pos);
 
         for (let i = 0; i < $('#fullpage div').length; i++) {
@@ -496,40 +559,6 @@ $.scrollify({
         var sectionID = $(currentSection).attr('id');
 
         
-        /* if (sectionID == 'section7') {
-            console.log('almost bottom of carousel, more divs added.');
-
-            let _win_height = $(window).height() / 2;
-            let _div_height = $('#section1').height() / 2;
-            final_pos = _win_height - _div_height;
-            console.log(final_pos);
-
-            $('#section0').offset({
-                top: final_pos - $('#section0').height(),
-                left: $(window).width() / 2
-            });
-            $('#section1').offset({
-                top: final_pos,
-                left: $(window).width() / 2
-            });
-            for (let i = 2; i < $('#fullpage div').length; i++) {
-                const section = $('#fullpage div')[i];
-                const pre_section = $('#fullpage div')[i - 1];
-
-                $(section).offset({
-                    top: $(pre_section).position().top + $(pre_section).height(),
-                    left: $(window).width() / 2
-                });
-
-            }
-            $.scrollify({
-
-                offset: -(final_pos),
-
-            });
-        } else {
-
-        } */
     },
     afterResize: function () {},
     afterRender: function () {}

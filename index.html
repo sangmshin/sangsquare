@@ -83,16 +83,21 @@
         <div class="row">
             <div class="col-sm-12 col-md-6 col-left fixed-top">
 
-                <div class="header">
-                    <div class="logo">
+                <div id="transition">
+                    <div id="transition_inside_1"></div>
+                    <div id="transition_inside_2"></div>
+                </div>
+
+                <div class="header" id="header_elements">
+                    <div class="logo" id="nav_logo">
                         <img src="./img/ss_logo.png" alt="">
                     </div>
 
-                    <div class="top-nav">
+                    <div class="top-nav" id="top-nav">
                         <nav class="nav text-right flex-column">
-                            <a class="nav-link active" href="#">ABOUT</a>
-                            <a class="nav-link" href="#">WORK</a>
-                            <a class="nav-link" href="#">CONTACT</a>
+                            <a id="top_nav_1" class="nav-link active" href="#">ABOUT</a>
+                            <a id="top_nav_2" class="nav-link" href="#">WORK</a>
+                            <a id="top_nav_3" class="nav-link" href="#">CONTACT</a>
                         </nav>
                     </div>
                 </div>
@@ -100,8 +105,33 @@
                 <div class="project_titles">
                     <div class="project_titles__middle d-flex align-items-center justify-content-end">
                         <div class="inner text-right">
+                            <svg id="title_slash" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 694.14 600.27">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #fff;
+                                        }
+                            
+                                        .cls-2 {
+                                            fill: none;
+                                            stroke: #000;
+                                            stroke-miterlimit: 10;
+                                            stroke-width: 10px;
+                                        }
+                                    </style>
+                                </defs>
+                                <title>TITLE SLASH</title>
+                                <g id="Layer_2" data-name="Layer 2">
+                                    <g id="Layer_1-2" data-name="Layer 1">
+                                        <polygon class="cls-1" points="600.14 0 1.14 600 694.14 600 694.14 0 600.14 0" />
+                                        <line class="cls-2" x1="598.05" y1="2.23" x2="0.71" y2="599.57" />
+                                    </g>
+                                </g>
+                            </svg>
                             <h1 class="elo" id="ms_title_1">MINDSPHERE.IO</h1>
                             <h1 class="elo" id="ms_title_2">MINIATURE WORLD&nbsp;&nbsp;&nbsp;</h1>
+
+
                             <div class="d-flex flex-row-reverse">
                                 <p class="text-right ag-rg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptate totam, ducimus
                                     ea dolore at? Officiis dicta asperiores ducimus, dignissimos assumenda adipisci nobis
@@ -114,108 +144,112 @@
                     </div>
                 </div>
 
+                
+
             </div>
             <!-- col-left -->
 
             <div class="col-sm-12 col-md-6 col-right d-flex flex-row-reverse w-100">
                 <div class="project_covers container-fluid">
                     <div id="fullpage" class="row project_covers__wrapper">
-                        <div class="section" id="section0">
+                        
+                        <div class="section" id="section0" data-section-name="">
                             <a class="cover" href="https://google.com" target="_blank">
                                 <img class="img-fluid" src="img/lp_work_cover_1.jpg" alt="cover 1" srcset="">
                             </a>
                         </div>
-                        <div class="section" id="section1">
+                        <div class="section" id="section1" data-section-name="">
                             <a class="cover" href="https://google.com" target="_blank">
                                 <img class="img-fluid" src="img/lp_work_cover_1.jpg" alt="cover 2" srcset="">
                             </a>
+                            
                         </div>
-                        <div class="section" id="section2">
+                        <div class="section" id="section2" data-section-name="">
                             <a class="cover"  href="https://google.com" target="_blank">
                                 <img class="img-fluid" src="img/lp_work_cover_2.jpg" alt="cover 3" srcset="">
                             </a>
                         </div>
-                        <div class="section" id="section3">
+                        <div class="section" id="section3" data-section-name="">
                             <a class="cover" href="https://google.com" target="_blank">
                                 <img class="img-fluid" src="img/lp_work_cover_3.jpg" alt="cover 4" srcset="">
                             </a>
                         </div>
-                        <div class="section" id="section4">
+                        <div class="section" id="section4" data-section-name="">
                             <a class="cover" href="https://google.com" target="_blank">
                                 <img class="img-fluid" src="img/lp_work_cover_1.jpg" alt="cover 5" srcset="">
                             </a>
                         </div>
-                        <div class="section" id="section5">
+                        <div class="section" id="section5" data-section-name="">
                             <a class="cover" href="https://google.com" target="_blank">
                                 <img class="img-fluid" src="img/lp_work_cover_2.jpg" alt="cover 6" srcset="">
                             </a>
                         </div>
-                        <div class="section" id="section6">
+                        <div class="section" id="section6" data-section-name="">
                             <a class="cover " href="https://google.com" target="_blank">
                                 <img class="img-fluid" src="img/lp_work_cover_3.jpg" alt="cover 7" srcset="">
                             </a>
                         </div>
-                        <div class="section" id="section7">
+                        <div class="section" id="section7" data-section-name="">
                             <a class="cover " href="https://google.com" target="_blank">
                                 <img class="img-fluid" src="img/lp_work_cover_3.jpg" alt="cover 7" srcset="">
                             </a>
                         </div>
-                        <div class="section" id="section8">
+                        <div class="section" id="section8" data-section-name="">
                             <a class="cover " href="https://google.com" target="_blank">
                                 <img class="img-fluid" src="img/lp_work_cover_3.jpg" alt="cover 7" srcset="">
                             </a>
                         </div>
-                        <div class="section" id="section9">
+                        <div class="section" id="section9" data-section-name="">
                             <a class="cover " href="https://google.com" target="_blank">
                                 <img class="img-fluid" src="img/lp_work_cover_3.jpg" alt="cover 7" srcset="">
                             </a>
                         </div>
-                        <div class="section" id="section10">
+                        <div class="section" id="section10" data-section-name="">
                             <a class="cover" href="https://google.com" target="_blank">
                                 <img class="img-fluid" src="img/lp_work_cover_1.jpg" alt="cover 1" srcset="">
                             </a>
                         </div>
-                        <div class="section" id="section11">
+                        <div class="section" id="section11" data-section-name="">
                             <a class="cover" href="https://google.com" target="_blank">
                                 <img class="img-fluid" src="img/lp_work_cover_1.jpg" alt="cover 2" srcset="">
                             </a>
                         </div>
-                        <div class="section" id="section12">
+                        <div class="section" id="section12" data-section-name="">
                             <a class="cover" href="https://google.com" target="_blank">
                                 <img class="img-fluid" src="img/lp_work_cover_2.jpg" alt="cover 3" srcset="">
                             </a>
                         </div>
-                        <div class="section" id="section13">
+                        <div class="section" id="section13" data-section-name="">
                             <a class="cover" href="https://google.com" target="_blank">
                                 <img class="img-fluid" src="img/lp_work_cover_3.jpg" alt="cover 4" srcset="">
                             </a>
                         </div>
-                        <div class="section" id="section14">
+                        <div class="section" id="section14" data-section-name="">
                             <a class="cover" href="https://google.com" target="_blank">
                                 <img class="img-fluid" src="img/lp_work_cover_1.jpg" alt="cover 5" srcset="">
                             </a>
                         </div>
-                        <div class="section" id="section15">
+                        <div class="section" id="section15" data-section-name="">
                             <a class="cover" href="https://google.com" target="_blank">
                                 <img class="img-fluid" src="img/lp_work_cover_2.jpg" alt="cover 6" srcset="">
                             </a>
                         </div>
-                        <div class="section" id="section16">
+                        <div class="section" id="section16" data-section-name="">
                             <a class="cover " href="https://google.com" target="_blank">
                                 <img class="img-fluid" src="img/lp_work_cover_3.jpg" alt="cover 7" srcset="">
                             </a>
                         </div>
-                        <div class="section" id="section17">
+                        <div class="section" id="section17" data-section-name="">
                             <a class="cover " href="https://google.com" target="_blank">
                                 <img class="img-fluid" src="img/lp_work_cover_3.jpg" alt="cover 7" srcset="">
                             </a>
                         </div>
-                        <div class="section" id="section18">
+                        <div class="section" id="section18" data-section-name="">
                             <a class="cover " href="https://google.com" target="_blank">
                                 <img class="img-fluid" src="img/lp_work_cover_3.jpg" alt="cover 7" srcset="">
                             </a>
                         </div>
-                        <div class="section" id="section19">
+                        <div class="section" id="section19" data-section-name="">
                             <a class="cover " href="https://google.com" target="_blank">
                                 <img class="img-fluid" src="img/lp_work_cover_3.jpg" alt="cover 7" srcset="">
                             </a>
@@ -224,6 +258,11 @@
                 </div>
             </div>
             <!-- col-right -->
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+                <div class="trans">sdfsdf</div> 
         </div>
     </div>
     <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script>
