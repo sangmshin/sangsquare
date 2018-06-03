@@ -1,0 +1,494 @@
+/*//////////////////////////_______/////////////////////////*/
+
+/*////////////////////////// FONTS /////////////////////////*/
+
+/*//////////////////////////-------/////////////////////////*/
+
+// FONTS COLLECTED/APPROVED BY ACUVUE TO USE //
+@font-face {
+    font-family: 'eloquentjfregularuploadedfile';
+    src: url('../fonts/eloquentjfregularpro-webfont.eot');
+    src: url('../fonts/eloquentjfregularpro-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/eloquentjfregularpro-webfont.woff2') format('woff2'), url('../fonts/eloquentjfregularpro-webfont.woff') format('woff'), url('../fonts/eloquentjfregularpro-webfont.ttf') format('truetype'), url('../fonts/eloquentjfregularpro-webfont.svg#eloquentjfregularuploadedfile') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AktivGrotesk-Regular';
+    src: url('../fonts/AktivGrotesk-Regular.eot');
+    src: url('../fonts/AktivGrotesk-Regular.woff2') format('woff2'), url('../fonts/AktivGrotesk-Regular.woff') format('woff'), url('../fonts/AktivGrotesk-Regular.ttf') format('truetype'), url('../fonts/AktivGrotesk-Regular.svg#AktivGrotesk-Regular') format('svg'), url('../fonts/AktivGrotesk-Regular.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AktivGrotesk-Medium';
+    src: url('../fonts/AktivGrotesk-Medium.eot');
+    src: url('../fonts/AktivGrotesk-Medium.woff2') format('woff2'), url('../fonts/AktivGrotesk-Medium.woff') format('woff'), url('../fonts/AktivGrotesk-Medium.ttf') format('truetype'), url('../fonts/AktivGrotesk-Medium.svg#AktivGrotesk-Medium') format('svg'), url('../fonts/AktivGrotesk-Medium.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AktivGrotesk-Bold';
+    src: url('../fonts/AktivGrotesk-Bold.eot');
+    src: url('../fonts/AktivGrotesk-Bold.woff2') format('woff2'), url('../fonts/AktivGrotesk-Bold.woff') format('woff'), url('../fonts/AktivGrotesk-Bold.ttf') format('truetype'), url('../fonts/AktivGrotesk-Bold.svg#AktivGrotesk-Bold') format('svg'), url('../fonts/AktivGrotesk-Bold.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$elo: 'eloquentjfregularuploadedfile';
+$ag-rg: 'AktivGrotesk-Regular';
+$ag-md: 'AktivGrotesk-Medium';
+$ag-bd: 'AktivGrotesk-Bold';
+.elo {
+    font-family: $elo;
+    letter-spacing: -1px;
+}
+
+.ag-rg {
+    font-family: $ag-rg;
+}
+
+.ag-md {
+    font-family: $ag-md;
+}
+
+.ag-bd {
+    font-family: $ag-bd;
+}
+body{
+    overflow-x: hidden !important;
+    // overflow-y: hidden !important;
+}
+.col-left{
+    
+
+}
+.header {
+    height: 25vh;
+    overflow: hidden;
+    .nav-link {
+        @extend .ag-bd;
+        color: black;
+        font-size: 14px;
+        padding: 0;
+        &:hover {
+            color: #00e49b;
+        }
+    }
+}
+
+.project_titles {
+    height: 50vh;
+}
+
+#ms_title_1,
+#ms_title_2 {
+    @extend .elo;
+    font-size: 60px;
+    margin-bottom: -5px
+}
+
+.project_titles {
+    .project_titles__middle {
+        height: 50vh;
+        .inner{
+            overflow: hidden;
+        }
+        p {
+            font-size: 17px;
+            max-width: 700px;
+        }
+    }
+    .project_titles__bottom {
+        transform: translateY(-100%);
+        p {
+            font-size: 14px;
+        }
+    }
+}
+.col-left {
+    // padding-right: 0;
+    // margin-right: 0;
+    // padding-left: 0;
+    // margin-left: 0;
+    // width: 100vw;
+    // margin-left: 49.3vw;
+}
+.col-right{
+    padding-right:0;
+    margin-right:0;
+    padding-left:0;
+    margin-left:0;
+    width: 100vw;
+    margin-left: 50vw;
+}
+.project_covers{
+    img{
+        width: 100%!important;
+    }
+}
+.project_covers__wrapper{
+        will-change: transform;
+        .active{
+            
+        }
+        .cover{
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            // right: 0;
+            // bottom: 0;
+            // margin: 0;
+            // display: -ms-flexbox;
+            // display: flex;
+            // // -ms-flex-align: center;
+            // align-items: center;
+            // width: 100%;
+            // z-index: 1;
+            // cursor: pointer;
+
+            img{
+                width: 50vw !important;
+            }
+        }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    #ms_title_1,
+    #ms_title_2 {
+        font-size: 40px;
+        margin-bottom: -5px
+    }
+    .project_titles {
+        .project_titles__middle {
+            height: 50vh;
+            p {
+                font-size: 15px; 
+                max-width: 80%;
+            }
+        }
+        .project_titles__bottom {
+            transform: translateY(-100%);
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    #ms_title_1,
+    #ms_title_2 {
+        font-size: 35px;
+        margin-bottom: -5px
+    }
+    .project_titles {
+        .project_titles__middle {
+            height: 50vh;
+            p {
+                font-size: 15px;
+                max-width: 80%;
+            }
+        }
+        .project_titles__bottom {
+            transform: translateY(-100%);
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+@media (min-width: 1px) and (max-width: 768px) {
+    #ms_title_1,
+    #ms_title_2 {
+        font-size: 35px;
+        margin-bottom: -5px
+    }
+    .project_titles {
+        .project_titles__middle {
+            height: 50vh;
+            p {
+                font-size: 15px;
+                max-width: 80%;
+            }
+        }
+        .project_titles__bottom {
+            transform: translateY(-100%);
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+    .project_covers__wrapper {
+        will-change: transform; // position: fixed;
+        .cover {
+            img {
+                width: 100vw !important;
+            }
+        }
+    }
+}
+// .title {
+//     font-size: 36px;
+//     font-weight: 100;
+//     margin-top: 0px;
+//     text-align: center !important;
+//     width: 100%;
+//     color: #454545;
+// }
+// .sub-title {
+//     @extend .title;
+//     font-size: 18px;
+//     padding: 0px 30px;
+// }
+// #thankyou-1 {
+//     padding: 180px 7% 200px 7%;
+//     .ty-title {
+//         font-size: 26px;
+//         font-weight: 100;
+//         border-bottom: none;
+//         margin-top: 40px;
+//         margin-bottom: 20px;
+//         color: #2a3138;
+//         text-align: center !important;
+//     }
+//     .ty-sub-title {
+//         @extend .ty-title;
+//     }
+// }
+// /*//////////////////////////_____________/////////////////////////*/
+// /*////////////////////////// MEDIA QUERY /////////////////////////*/
+// /*//////////////////////////-------------/////////////////////////*/
+// /*MOBILE DEVICE */
+// @media (max-width: 480px) {
+//     #survey-title-1 {
+//         padding-top: 30px;
+//     }
+//     .error-msg {
+//         padding: 0px 0px 0px 40px;
+//         margin: 0 30% 30px 30%;
+//     }
+//     .msg-header {
+//         font-size: 1.7rem;
+//         margin-top: 10px;
+//         margin-bottom: 0px;
+//         font-weight: 700;
+//     }
+//     .msg-sub-header {
+//         font-size: 1.4rem;
+//         margin-left: -38px
+//     }
+//     #thankyou-1 {
+//         padding-top: 40px;
+//         padding-bottom: 50px;
+//     }
+// }
+// @media (max-width: 767px) {
+//     #survey-title-1 {
+//         padding-top: 30px;
+//     }
+//     .title {
+//         padding-left: 10%;
+//         padding-right: 10%;
+//     }
+//     .sub-title {
+//         padding: 0 10%;
+//     }
+//     .form-title {
+//         padding: 0 10%;
+//     }
+//     .error-msg {
+//         margin: 0px 20% 20px 20%;
+//     }
+//     .options {
+//         padding: 20px 6% !important;
+//     }
+//     #survey-form-1 label {
+//         margin: auto 0px;
+//     }
+//     #thankyou-1 {
+//         padding-top: 80px;
+//         padding-bottom: 100px;
+//     }
+// }
+// @media (max-width: 640px) {
+//     .error-msg {
+//         padding: 0px 0px 0px 40px;
+//         margin: 0 16% 20px 16% !important;
+//     }
+//     .msg-header {
+//         margin-left: -10px !important;
+//     }
+//     .msg-sub-header {
+//         margin-left: -50px !important;
+//     }
+//     .options {
+//         padding-bottom: 10px !important;
+//         padding-top: 10px !important;
+//     }
+//     .search-button.search-button-processed {
+//         display: block !important;
+//     }
+//     .label-text {
+//         padding-bottom: 0;
+//     }
+//     #thankyou-1 {
+//         padding-top: 60px;
+//         padding-bottom: 130px;
+//     }
+// }
+// @media (min-width: 768px) and (max-width: 991px) {
+//     .sub-title {
+//         padding: 0px 50px;
+//     }
+// }
+// @media (min-width: 641px) and (max-width: 1024px) {
+//     .search-button.search-button-processed {
+//         display: block !important;
+//     }
+//     #survey-title-1 {
+//         padding-top: 50px;
+//     }
+//     #thankyou-1 {
+//         padding-top: 180px;
+//         padding-bottom: 200px;
+//     }
+// }
+// @media (min-width: 1200px) {}
+// /* CHANGE MARGIN VALUE IN .ROW OF BOOTSTRAP STANDARD ROW*/
+// /* caused issue with Acuvue's .row class which doesn't margin */
+// .row {
+//     margin-right: 0 !important;
+//     margin-left: 0 !important;
+// }
+// /*
+// .container:before,
+// .container:after,
+// .row:before,
+// .row:after {
+//     content: none !important;
+// }
+// */
+// .row:before {
+//     content: none;
+// }
+// .row:after {
+//     content: '';
+// }
+// .col-xs-12 .col-xs-6 .col-sm-6 .col-md-6 .col-lg-6 .col-xl-6 {
+//     display: -webkit-box;
+//     display: -webkit-flex;
+//     display: -ms-flexbox;
+//     display: flex;
+// }
+// /*  REPLACING RULE OF EXISTING ACUVUE SITE  */
+// a {
+//     color: #003087;
+//     text-decoration: none !important;
+//     text-decoration-line: none !important;
+//     text-decoration-style: initial !important;
+//     text-decoration-color: initial !important;
+// }
+// .navigation-row .three-levels .dropdown-full-width,
+// .navigation-row .two-levels .dropdown-full-width {
+//     border-bottom: 1px solid #e0e2e5 !important;
+// }
+// .acuvue-login-dropdown .acuvue-login-toggle-link.menu-loggedin:after,
+// .acuvue-login-dropdown .acuvue-login-toggle-link.menu-login:after {
+//     color: currentColor;
+//     content: "\e618";
+//     display: none;
+//     font-family: 'icomoon';
+//     font-size: 18px;
+//     margin-top: -7px;
+//     position: absolute;
+//     top: 50%;
+// }
+// .hidden {
+//     display: inline-block !important;
+// }
+// .title-row {
+//     display: none;
+// }
+// input[type="checkbox"]+label:before,
+// input[type="checkbox"]+.change-password-label:before,
+// input[type="radio"]+label:before,
+// input[type="radio"]+.change-password-label:before {
+//     width: 20px;
+//     height: 20px;
+//     position: absolute;
+//     top: 14px;
+// }
+// input[type="checkbox"]:checked+label:after,
+// input[type="checkbox"]:checked+.change-password-label:after,
+// input[type="radio"]:checked+label:after,
+// input[type="radio"]:checked+.change-password-label:after {
+//     top: 18px;
+//     left: 4px !important;
+// }
+// /////
+// ///// Micro soft EDGE Target specific CSS 
+// /////
+// @supports (-ms-ime-align: auto) {
+//     .navigation-row .two-levels .dropdown-full-width,
+//     .navigation-row .three-levels .dropdown-full-width,
+//     .navigation-row .two-levels .dropdown-full-width {
+//         border-bottom: none !important;
+//     }
+// }
+// /////
+// ///// IE 10 & 11 TARGETED SPECIFICS CSS 
+// /////
+// @media all and (-ms-high-contrast: none),
+// (-ms-high-contrast: active) {
+//     .ai-strap-title.ai-strap-level-1,
+//     .ai-strap-level-2,
+//     .ai-strap-level-3 {
+//         padding-top: 8px !important;
+//     }
+//     .ai-strap-title.ai-strap-level-1 strong:after {
+//         padding-top: 12px !important;
+//     }
+//     .nav-button.keep-active-nav:before,
+//     .nav-button.active-nav:before {
+//         top: 16px !important;
+//     }
+//     .touch-nav .accordion>ul a:before,
+//     .touch-nav .accordion>ul span.nolink:before,
+//     .touch-nav .menu-utility-menu li a:before,
+//     .touch-nav .acuvue-login-toggle-link:before {
+//         bottom: -17px !important;
+//     }
+//     .navigation-row .two-levels .dropdown-full-width,
+//     .navigation-row .three-levels .dropdown-full-width,
+//     .navigation-row .two-levels .dropdown-full-width {
+//         border-bottom: none !important;
+//     }
+// }
+// @media screen and (-ms-high-contrast: active),
+// (-ms-high-contrast: none) {
+//     .ai-strap-title.ai-strap-level-1,
+//     .ai-strap-level-2,
+//     .ai-strap-level-3 {
+//         padding-top: 8px !important;
+//     }
+//     .ai-strap-title.ai-strap-level-1 strong:after {
+//         padding-top: 12px !important;
+//     }
+//     .nav-button.keep-active-nav:before,
+//     .nav-button.active-nav:before {
+//         top: 16px !important;
+//     }
+//     .touch-nav .accordion>ul a:before,
+//     .touch-nav .accordion>ul span.nolink:before,
+//     .touch-nav .menu-utility-menu li a:before,
+//     .touch-nav .acuvue-login-toggle-link:before {
+//         bottom: -17px !important;
+//     }
+//     .navigation-row .two-levels .dropdown-full-width,
+//     .navigation-row .three-levels .dropdown-full-width,
+//     .navigation-row .two-levels .dropdown-full-width {
+//         border-bottom: none !important;
+//     }
+// }
